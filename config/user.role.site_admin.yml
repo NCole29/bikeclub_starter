@@ -1,0 +1,27 @@
+langcode: en
+status: true
+id: site_admin
+label: 'Site administrator'
+weight: 8
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access block library'
+  - 'access coffee'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access help pages'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer blocks'
+  - 'administer block content'
+  - 'administer block types'
+  - 'administer nodes'
+  - 'administer users'
+  - 'administer views'
+  - 'create and edit custom blocks'
+  - 'create url aliases'
+  - 'view the administration theme'
+  - 'view own unpublished content'
+  - 'view user email addresses'

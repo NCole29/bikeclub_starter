@@ -1,0 +1,19 @@
+langcode: en
+status: true
+id: rides_coordinator
+label: 'Rides coordinator'
+weight: 5
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access coffee'
+  - 'access content overview'
+  - 'access media overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'create media'
+  - 'delete any media'
+  - 'update any media'
+  - 'view the administration theme'
+  - 'view own unpublished media'
+  - 'view user email addresses'

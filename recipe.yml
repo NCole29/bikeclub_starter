@@ -1,0 +1,81 @@
+name: 'Drupal for Bike Clubs'
+type: Site
+description: 'Install admin tools and user roles for a Bike Club website.'
+recipes:
+  - core/recipes/administrator_role
+  - core/recipes/core_recommended_maintenance
+  - core/recipes/core_recommended_performance
+  - core/recipes/basic_block_type
+  - core/recipes/user_picture
+  - bikeclub_page
+install:
+  - config
+  - contextual
+  - field_ui
+  - help
+  - history
+  - menu_ui
+  - navigation
+  - olivero  
+  - views_ui
+  # Contrib - add 'admin_toolbar_tools' when compatible with project_browser
+  - admin_toolbar
+  - automatic_updates
+  - automatic_updates_extensions
+  - coffee
+  - config_ignore
+  - gin
+  - gin_toolbar
+  - login_emailusername
+  - menu_admin_per_menu
+  - menu_block
+  - pathauto
+  - project_browser
+  - redirect
+  - token  
+config:
+  import:
+    gin:
+      - block.block.gin_breadcrumbs
+      - block.block.gin_content
+      - block.block.gin_local_actions
+      - block.block.gin_messages
+      - block.block.gin_page_title
+      - block.block.gin_primary_local_tasks
+      - block.block.gin_secondary_local_tasks
+    navigation:
+      - system.menu.content
+    claro:
+      - block.block.claro_breadcrumbs
+      - block.block.claro_content
+      - block.block.claro_local_actions
+      - block.block.claro_messages
+      - block.block.claro_page_title  
+      - block.block.claro_primary_local_tasks
+      - block.block.claro_secondary_local_tasks
+  actions:
+    project_browser.admin_settings:
+      simpleConfigUpdate:
+        allowed_projects:
+          recipes:
+            - bikeclub_announcement
+            - bikeclub_event
+            - bikeclub_faqs
+            - bikeclub_page
+        enabled_sources:
+          - drupalorg_jsonapi
+          - recipes
+        allow_ui_install: true
+        max_selections: 1
+    system.site:
+      simpleConfigUpdate:    
+        page.front: '/node'
+    system.theme:
+      simpleConfigUpdate:
+        admin: gin
+    user.settings:
+      simpleConfigUpdate:
+        register: admin_only
+    automatic_updates.settings:
+      simpleConfigUpdate:
+        allow_core_minor_updates: true

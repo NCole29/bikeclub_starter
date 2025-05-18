@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {}
+id: clubcopyright
+region: footer_bottom
+weight: -9
+provider: null
+plugin: club_copyright
+settings:
+  id: club_copyright
+  label: 'Club copyright'
+  provider: club
+  label_display: '0'
+visibility: {  }
