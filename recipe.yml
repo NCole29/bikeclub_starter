@@ -1,6 +1,6 @@
 name: 'Drupal for Bike Clubs'
 type: Site
-description: 'Install admin tools and user roles for a Bike Club website.'
+description: 'Base recipe for a Bike Club website (admin tools and user roles).'
 recipes:
   - core/recipes/administrator_role
   - core/recipes/core_recommended_maintenance
@@ -58,10 +58,16 @@ config:
       simpleConfigUpdate:
         allowed_projects:
           recipes:
-            - bikeclub_announcement
-            - bikeclub_event
+            - bikeclub_announcements
+            - bikeclub_events
             - bikeclub_faqs
             - bikeclub_page
+            - bikeclub_webform_nodes
+            - bikeclub_civicrm
+            - bikeclub_default_content
+            - bikeclub_editorial_workflow
+            - bikeclub_member_directory
+            - bikeclub_paragraph_types
         enabled_sources:
           - drupalorg_jsonapi
           - recipes
