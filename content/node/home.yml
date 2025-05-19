@@ -16,7 +16,7 @@ default:
       target_id: 1
   title:
     -
-      value: Home
+      value: 'Welcome to Drupal'
   created:
     -
       value: 1747691220
@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /home
+      alias: /welcome
       langcode: en
       pathauto: 1
   field_text:
