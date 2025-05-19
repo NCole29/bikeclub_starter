@@ -31,7 +31,7 @@ default:
       value: true
   path:
     -
-      alias: /welcome-drupal-bike-clubs
+      alias: /home
       langcode: en
       pathauto: 1
   field_text:
