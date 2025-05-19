@@ -13,28 +13,23 @@
   ],
   "repositories": {
     "bikeclub_announcements": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_announcements" },
-    "bikeclub_banner": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_banner" },		
-    "bikeclub_civicrm": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_civicrm" },
-    "bikeclub_content_type_base": { "type": "vcs", "url": "https://github.com/NCole29/bikeclub_content_type_base" },
     "bikeclub_faqs": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_faqs" },
-    "bikeclub_events": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_events" },
-    "bikeclub_editorial_workflow": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_editorial_workflow" },
-    "bikeclub_field_storage_registration": { "type": "vcs", "url": "https://github.com/NCole29/bikeclub_field_storage_registration" },
-    "bikeclub_locations": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_locations" },
-    "bikeclub_media": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_media" },
-    "bikeclub_member_directory": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_member_directory" },
-    "bikeclub_olivero": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_olivero" },
     "bikeclub_page": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_page" },
-    "bikeclub_paragraph_types": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_paragraph_types" },
     "bikeclub_webform_nodes": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_webform_nodes" },
-    "user_contacts": {"type": "vcs", "url": "https://github.com/NCole29/user_contacts" }
+    "bikeclub_default_content": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_default_content" },    
+    "bikeclub_editorial_workflow": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_editorial_workflow" },
+    "bikeclub_member_directory": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_member_directory" },
+    "bikeclub_paragraph_types": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_paragraph_types" },    
+    "bikeclub_olivero": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_olivero" }
   },
   "require": {
+    "bikeclub/bikeclub_olivero": ">=1.0",
     "bikeclub/bikeclub_page": ">=1.0",
     "drupal/admin_toolbar": "^3.5",
     "drupal/automatic_updates": "^3.1",
     "drupal/coffee": "^2.0",
     "drupal/config_ignore": ">=3.3",
+    "drupal/dashboard": "^2",
     "drupal/gin": "^4",		
     "drupal/login_emailusername": "^3.0",
     "drupal/menu_admin_per_menu": "^1.6",
@@ -44,14 +39,8 @@
     "drupal/token": "^1.15"
   },
   "suggest": {
-    "bikeclub/bikeclub_civicrm": "Install CiviCRM.",
     "bikeclub/bikeclub_announcements": "Adds an Announcement content type.",
-    "bikeclub/bikeclub_events": "Adds an Events content type.",
-    "bikeclub/bikeclub_faqs": "Adds a FAQs content type.",
-    "bikeclub/bikeclub_webform_nodes": "Adds a Webform Node content type.",
-    "bikeclub/bikeclub_editorial_workflow": "Adds editorial workflow.",
-    "bikeclub/bikeclub_member_directory": "Adds a member directory.",
-    "bikeclub/bikeclub_paragraph types": "Provides paragraph types."
+    "bikeclub/bikeclub_faqs": "Adds a FAQs content type."
   },
   "version": "1.0.1"
 }

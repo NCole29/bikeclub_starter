@@ -9,21 +9,28 @@ recipes:
   - core/recipes/user_picture
   - bikeclub_page
 install:
+  - announcements_feed
   - config
   - contextual
   - field_ui
   - help
   - history
+  - layout_builder
+  - layout_discovery
   - menu_ui
+  - menu_link_content
   - navigation
+  - node
   - olivero  
   - views_ui
   # Contrib - add 'admin_toolbar_tools' when compatible with project_browser
   - admin_toolbar
   - automatic_updates
   - automatic_updates_extensions
+  - bikeclub_olivero
   - coffee
   - config_ignore
+  - dashboard
   - gin
   - gin_toolbar
   - login_emailusername
@@ -34,36 +41,46 @@ install:
   - redirect
   - token  
 config:
+  strict: false
   import:
-    gin:
-      - block.block.gin_breadcrumbs
-      - block.block.gin_content
-      - block.block.gin_local_actions
-      - block.block.gin_messages
-      - block.block.gin_page_title
-      - block.block.gin_primary_local_tasks
-      - block.block.gin_secondary_local_tasks
-    navigation:
-      - system.menu.content
-    claro:
-      - block.block.claro_breadcrumbs
-      - block.block.claro_content
-      - block.block.claro_local_actions
-      - block.block.claro_messages
-      - block.block.claro_page_title  
-      - block.block.claro_primary_local_tasks
-      - block.block.claro_secondary_local_tasks
+    bikeclub_olivero: '*'  
+    node:
+      # Import config which is imported by the Standard profile,
+      # exclude view_mode.rss, include optional views.
+      - core.entity_view_mode.node.full
+      - core.entity_view_mode.node.teaser
+      - system.action.node_delete_action
+      - system.action.node_make_sticky_action
+      - system.action.node_make_unsticky_action
+      - system.action.node_promote_action
+      - system.action.node_publish_action
+      - system.action.node_save_action
+      - system.action.node_unpromote_action
+      - system.action.node_unpublish_action
+      - views.view.content
+      - views.view.frontpage
+    gin: '*'
+    navigation: '*'
+    claro: '*'
+    user:
+      # This view mode is only needed because Olivero expects it to exist
+      # in certain situations.
+      - core.entity_view_mode.user.compact
+      - views.view.user_admin_people
   actions:
+    automatic_updates.settings:
+      simpleConfigUpdate:
+        allow_core_minor_updates: true
+    node.settings:
+      simpleConfigUpdate:
+        use_admin_theme: true
     project_browser.admin_settings:
       simpleConfigUpdate:
         allowed_projects:
           recipes:
             - bikeclub_announcements
-            - bikeclub_events
             - bikeclub_faqs
-            - bikeclub_page
             - bikeclub_webform_nodes
-            - bikeclub_civicrm
             - bikeclub_default_content
             - bikeclub_editorial_workflow
             - bikeclub_member_directory
@@ -71,17 +88,15 @@ config:
         enabled_sources:
           - drupalorg_jsonapi
           - recipes
-        allow_ui_install: true
+        allow_ui_install: false
         max_selections: 1
     system.site:
-      simpleConfigUpdate:    
-        page.front: '/node'
+      simpleConfigUpdate:
+        page.front: '/home'
     system.theme:
       simpleConfigUpdate:
-        admin: gin
+        admin: claro
+        default: olivero
     user.settings:
       simpleConfigUpdate:
         register: admin_only
-    automatic_updates.settings:
-      simpleConfigUpdate:
-        allow_core_minor_updates: true
