@@ -25,6 +25,7 @@
   "require": {
     "bikeclub/bikeclub_olivero": ">=1.0",
     "bikeclub/bikeclub_page": ">=1.0",
+    "bikeclub/bikeclub_olivero": ">=1.0",
     "drupal/admin_toolbar": "^3.5",
     "drupal/automatic_updates": "^3.1",
     "drupal/coffee": "^2.0",
