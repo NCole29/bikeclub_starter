@@ -79,12 +79,12 @@ config:
         allowed_projects:
           recipes:
             - bikeclub_announcements
-            - bikeclub_faqs
-            - bikeclub_webform_nodes
             - bikeclub_default_content
             - bikeclub_editorial_workflow
+            - bikeclub_faqs
             - bikeclub_member_directory
             - bikeclub_paragraph_types
+            - bikeclub_webform_nodes
         enabled_sources:
           - drupalorg_jsonapi
           - recipes

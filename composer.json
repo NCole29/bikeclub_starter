@@ -12,20 +12,18 @@
     }
   ],
   "repositories": {
-    "bikeclub_announcements": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_announcements" },
-    "bikeclub_faqs": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_faqs" },
-    "bikeclub_page": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_page" },
-    "bikeclub_webform_nodes": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_webform_nodes" },
     "bikeclub_default_content": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_default_content" },    
     "bikeclub_editorial_workflow": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_editorial_workflow" },
     "bikeclub_member_directory": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_member_directory" },
     "bikeclub_paragraph_types": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_paragraph_types" },    
-    "bikeclub_olivero": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_olivero" }
+    "bikeclub_webform_nodes": {"type": "vcs", "url": "https://github.com/NCole29/bikeclub_webform_nodes" },
   },
   "require": {
-    "bikeclub/bikeclub_olivero": ">=1.0",
-    "bikeclub/bikeclub_page": ">=1.0",
-    "bikeclub/bikeclub_olivero": ">=1.0",
+    "bikeclub/bikeclub_default_content": ">=1.0",
+    "bikeclub/bikeclub_editorial_workflow": ">=1.0",
+    "bikeclub/bikeclub_member_directory": ">=1.0",
+    "bikeclub/bikeclub_paragraph_types": ">=1.0",
+    "bikeclub/bikeclub_webform_nodes": ">=1.0",
     "drupal/admin_toolbar": "^3.5",
     "drupal/automatic_updates": "^3.1",
     "drupal/coffee": "^2.0",
@@ -40,8 +38,11 @@
     "drupal/token": "^1.15"
   },
   "suggest": {
-    "bikeclub/bikeclub_announcements": "Adds an Announcement content type.",
-    "bikeclub/bikeclub_faqs": "Adds a FAQs content type."
+    "bikeclub/bikeclub_announcements": "Adds an Announcement content type. Announcements are published for a scheduled period of time and displayed on the home page",
+    "bikeclub/bikeclub_faqs": "Adds a FAQs content type to provide information in a question-and-answer format in collapsible fields."
   },
   "version": "1.0.1"
 }
+
+
+
