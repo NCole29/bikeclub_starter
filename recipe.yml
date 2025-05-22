@@ -92,7 +92,7 @@ config:
         max_selections: 1
     system.site:
       simpleConfigUpdate:
-        page.front: '/welcome'
+        page.front: '/welcome-drupal'
     system.theme:
       simpleConfigUpdate:
         admin: claro
