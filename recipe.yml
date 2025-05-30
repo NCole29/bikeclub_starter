@@ -36,7 +36,6 @@ install:
   - login_emailusername
   - menu_admin_per_menu
   - menu_block
-  - pathauto
   - project_browser
   - redirect
   - token  
@@ -80,6 +79,7 @@ config:
           recipes:
             - bikeclub_announcements
             - bikeclub_default_content
+            - bikeclub_dev
             - bikeclub_editorial_workflow
             - bikeclub_faqs
             - bikeclub_member_directory
@@ -92,11 +92,11 @@ config:
         max_selections: 1
     system.site:
       simpleConfigUpdate:
-        page.front: '/welcome-drupal'
+        page.front: '/node'
     system.theme:
       simpleConfigUpdate:
-        admin: claro
-        default: olivero
+        admin: gin
+        default: bikeclub_olivero
     user.settings:
       simpleConfigUpdate:
         register: admin_only

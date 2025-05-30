@@ -21,7 +21,6 @@
     "drupal/login_emailusername": "^3.0",
     "drupal/menu_admin_per_menu": "^1.6",
     "drupal/menu_block": "^1.14",
-    "drupal/pathauto": "^1.13",
     "drupal/redirect": "^1.11",
     "drupal/token": "^1.15"
   },
