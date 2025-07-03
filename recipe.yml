@@ -7,6 +7,7 @@ recipes:
   - core/recipes/core_recommended_performance
   - core/recipes/basic_block_type
   - core/recipes/user_picture
+  - bikeclub_announcements
   - bikeclub_page
 install:
   - announcements_feed
@@ -27,7 +28,6 @@ install:
   - admin_toolbar
   - automatic_updates
   - automatic_updates_extensions
-  - bikeclub_olivero
   - coffee
   - config_ignore
   - dashboard
@@ -78,9 +78,11 @@ config:
         allowed_projects:
           recipes:
             - bikeclub_announcements
+            - bikeclub_civicrm
             - bikeclub_default_content
             - bikeclub_dev
             - bikeclub_editorial_workflow
+            - bikeclub_events
             - bikeclub_faqs
             - bikeclub_member_directory
             - bikeclub_paragraph_types
@@ -96,7 +98,7 @@ config:
     system.theme:
       simpleConfigUpdate:
         admin: gin
-        default: bikeclub_olivero
+        default: olivero
     user.settings:
       simpleConfigUpdate:
         register: admin_only

@@ -15,7 +15,7 @@
     "drupal/admin_toolbar": "^3.5",
     "drupal/automatic_updates": "^3.1",
     "drupal/coffee": "^2.0",
-    "drupal/config_ignore": ">=3.3",
+    "drupal/config_ignore": "^3.3",
     "drupal/dashboard": "^2",
     "drupal/gin": "^4",		
     "drupal/login_emailusername": "^3.0",

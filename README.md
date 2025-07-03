@@ -1,45 +1,74 @@
-# Bike Club - Base Repository 
+# Drupal for Bike Clubs
 
-## Overview
+Drupal-for-Bikeclubs is an open source product built with Drupal and CiviCRM to provide key components for cycling clubs:
 
-The base repository is the first step in setting up the Bike Club website **AFTER** you have installed Drupal and CiviCRM.
-The base recipe installs administrative tools and common field types. 
+- Membership and Event registration
+- Ride calendar
+- Ride pages with RideWithGPS maps and information
 
-To install a new Drupal site with CiviCRM in your local development environment, use the scripts located in **[bikeclub/bikeclub-scripts](https://github.com/NCole29/bikeclub-scripts)**.
+## Getting started
 
-After installing Drupal you are ready to apply this recipe.
+Use [DDEV](https://ddev.com) to install and setup your site in a local development environment. After completing site configuartion locally, you can easily migrate the site to a web host.
 
-## How to Apply this Recipe
+To use [DDEV](https://ddev.com), follow these instructions:
 
-Use a terminal window in your local development environment (e.g., the terminal window in VS Code) to issue each of the following commands. 
+1. Install DDEV following the [documentation](https://ddev.com/get-started/)
+2. Download drupal-bikeclub.zip 
+3. Open a Terminal window and create a folder (e.g., my-site) where you would like to install Drupal-for-Bikeclubs. 
+    ```shell
+    mkdir my-site && cd my-site
+    ```
+4. Run the following command to configure the folder for Drupal and start ddev:
+    ```shell
+    ddev config --project-type=drupal11 --docroot=web
+    ddev start
+    ```
 
-	ddev composer config repo.bikeclub-base git "https://github.com/NCole29/bikeclub-base"
-	ddev composer require bikeclub/bikeclub-base:1.0.2
-	ddev exec php core/scripts/drupal recipe recipes/contrib/bikeclub-base
-	
-Description:	
-1. "ddev composer config" adds the bikeclub repository to your composer.json file.
-2. "ddev composer require" downloads the bikeclub repository to the web/recipes/contrib folder. 
-3. "ddev exec php" executes the drupal script to apply the bikeclub-base recipe to the site.
-	
-Note: Step 2 will download all bikeclub recipes because they are all listed in the  bikeclub-base/composer.json file. We recommend that you *apply* recipes individually.
+5. Extract the content of drupal-bikeclub.zip. 
+    - Copy the composer.json and readme.md to the "my-site" folder.
+    - Copy the web/profiles folder to "mysite/web/profiles".
 
-## Included in the Base Recipe
+6. Install Drupal-for-Bikeclubs with these commands:
+    ```shell
+    ddev composer install
+    ddev launch
+    ```
 
- - Core recipes for maintenance, and performance; basic_block_type; and user picture.
- - Core modules for administration: config, contextual, field_ui, help, history, views_ui.
- - Core modules for field types: datetime, link, options.
- - Contrib modules for the admin UI: admin_toolbar, coffee, config_ignore.
- - Contrib modules for managing menus: menu_admin_per_menu, menu_blocks.
- - Contrib modules for user UI: mail_login.
+### Installation
 
-## Sub-Repositories / Recipes downloaded with this base recipe
+The Bikeclub installer provides administrative tools and features preconfigured with smart defaults, plus four content types:
 
-1. **[bikeclub/bikeclub-civicrm](https://github.com/NCole29/bikeclub-civicrm)**
-	- Installs Drupal modules to integrate CiviCRM with Drupal:
-	  civicrm_entity, civicrm_group_roles, civicrm_member_roles, civicrmtheme, webform_civicrm
-	
-2. **[bikeclub/bikeclub-media](https://github.com/NCole29/bikeclub-media)**
-	- Installs media types and configuration for files and images. Four image types are configured with specific aspect ratios: banners (20:7), gallery images (3:2), images to insert in the editor (16:9 and 4:3).
-	- Installs file and image taxonomies to categorize files.
-	
+- Announcement
+- Page
+- Ride
+- Recurring ride
+
+After the initial install, go to **Extend** on the Administrative menu and click Recipes on the top menu to install additional recipes:
+
+Recipe               		  | Description
+--------------------------| -------------------- 
+Bikeclub CiviCRM			    | CiviCRM integrates with Drupal to manage membership and event registration; it must be installed after Drupal installation is complete.
+Bikeclub Dev         		  | Optional development tools for use in a local development environment.
+Bikeclub Events				    | Event content type. Includes the option to obtain registration with a webform linked to CiviCRM, a CiviCRM form, or an external registration site.
+Bikeclub FAQS				      | FAQs content type. Presents information in a Q-and-A format.
+Bikeclub Help             | Provides custom Help pages with information specific to this installation.
+Bikeclub Member directory	| Opt-in member directory to display name, city/town, and state. A link on name opens a Drupal contact form which will forward email to members without disclosing their email address on the website.
+Bikeclub Paragraph types	| Three simple paragraph types which can be used to construct page layouts. Alternate sources of paragraph types may be installed instead of this recipe.
+Bikeclub Webform nodes		| Webform node content type. For webforms that are used repeatedly (e.g., annual survey or volunteer signup), presenting the webform in a new webform node keeps registrations for each instance separate.
+
+
+## Documentation
+
+In addition, learn more about managing a Drupal-based application in the [Drupal User Guide](https://www.drupal.org/docs/user_guide/en/index.html).
+
+## Attributions
+
+The Drupal-for-Bikeclubs installer is based on Drupal CMS and employs the Drupal Recipe Installer Kit.
+
+[Report issues in the queue](https://drupal.org/node/add/project-issue/drupal_cms), providing as much detail as you can. You can also join the #drupal-cms-support channel in the [Drupal Slack community](https://www.drupal.org/slack).
+
+## License
+
+Drupal-for-Bikeclubs and all derivative works are licensed under the [GNU General Public License, version 2 or later](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
+
+Learn about the [Drupal trademark and logo policy here](https://www.drupal.com/trademark).
