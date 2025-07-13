@@ -1,14 +1,14 @@
-name: 'Drupal for Bike Clubs'
+name: 'Bike Club Starter'
 type: Site
-description: 'Base recipe for a Bike Club website (admin tools and user roles).'
+description: 'Base recipe for a Bike Club website: admin tools and user roles.'
 recipes:
   - core/recipes/administrator_role
   - core/recipes/core_recommended_maintenance
   - core/recipes/core_recommended_performance
   - core/recipes/basic_block_type
   - core/recipes/user_picture
-  - bikeclub_announcements
-  - bikeclub_page
+  # Important to include this here so page_access taxonomy terms are imported with TIDs = 1,2,3 (specified in tac_lite settings).
+  - bikeclub_content_type_base
 install:
   - announcements_feed
   - config
@@ -22,10 +22,10 @@ install:
   - menu_link_content
   - navigation
   - node
-  - olivero  
+  - olivero
+  - user
   - views_ui
   # Contrib - add 'admin_toolbar_tools' when compatible with project_browser
-  - admin_toolbar
   - automatic_updates
   - automatic_updates_extensions
   - coffee
@@ -57,15 +57,16 @@ config:
       - system.action.node_unpromote_action
       - system.action.node_unpublish_action
       - views.view.content
+      - views.view.content_recent
       - views.view.frontpage
     gin: '*'
     navigation: '*'
     claro: '*'
     user:
-      # This view mode is only needed because Olivero expects it to exist
+      # View mode is only needed because Olivero expects it to exist
       # in certain situations.
       - core.entity_view_mode.user.compact
-      - views.view.user_admin_people
+      - views.view.who_s_online.yml
   actions:
     automatic_updates.settings:
       simpleConfigUpdate:
@@ -79,12 +80,14 @@ config:
           recipes:
             - bikeclub_announcements
             - bikeclub_civicrm
+            - bikeclub_civicrm_config
             - bikeclub_default_content
             - bikeclub_dev
             - bikeclub_editorial_workflow
             - bikeclub_events
             - bikeclub_faqs
             - bikeclub_member_directory
+            - bikeclub_page
             - bikeclub_paragraph_types
             - bikeclub_webform_nodes
         enabled_sources:
@@ -102,3 +105,11 @@ config:
     user.settings:
       simpleConfigUpdate:
         register: admin_only
+    views.view.who_s_online.yml:
+      simpleConfigUpdate:
+        display_options:
+          access:
+            type: role
+            options:
+              role:
+                administrator: administrator
