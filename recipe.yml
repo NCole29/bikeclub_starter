@@ -80,7 +80,6 @@ config:
           recipes:
             - bikeclub_announcements
             - bikeclub_civicrm
-            - bikeclub_civicrm_config
             - bikeclub_default_content
             - bikeclub_dev
             - bikeclub_editorial_workflow
