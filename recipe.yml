@@ -21,6 +21,7 @@ install:
   - menu_link_content
   - navigation
   - olivero
+  - user
   - views_ui
   # Contrib - add 'admin_toolbar_tools' when compatible with project_browser
   - automatic_updates
@@ -39,10 +40,16 @@ install:
 config:
   strict: false
   import:
-    bikeclub_olivero: '*'  
     claro: '*'
+    dashboard: '*'
     gin: '*'
     navigation: '*'
+    olivero: '*'
+    redirect:
+      - system.action.redirect_delete_action
+      - views.view.redirect
+    user:
+      - views.view.who_s_online
   actions:
     automatic_updates.settings:
       simpleConfigUpdate:
@@ -69,63 +76,18 @@ config:
         max_selections: 1
     system.site:
       simpleConfigUpdate:
-        page.front: '/node'
+        front: '/node'
     system.theme:
       simpleConfigUpdate:
         admin: gin
         default: olivero
-    tac_lite:
-      simpleConfigUpdate:
-        tac_lite_categories:
-          page_access: page_access
-        tac_lite_schemes: 1
-        menu_rebuild_needed: true
-        tac_lite_config_scheme_1:
-          name: 'View access'
-          perms:
-            grant_view: grant_view
-          unpublished: 0
-          term_visibility: 0
-        # 1=Admin, 2=Members, 3=Ride leaders.
-        # IDs = 1,2,3 depend on these terms being imported first by bikeclub_content_base.
-        tac_lite_grants_scheme_1:
-          anonymous:
-            page_access: {  }
-          authenticated:
-            page_access: {  }
-          administrator:
-            page_access:
-              1: '1'
-              2: '2'
-              3: '3'
-          member:
-            page_access:
-              2: '2'
-          ride_leader:
-            page_access:
-              3: '3'
-          rides_coordinator:
-            page_access:
-              2: '2'
-              3: '3'
-          membership:
-            page_access:
-              2: '2'
-              3: '3'
-          site_admin:
-            page_access:
-              1: '1'
-              2: '2'
-              3: '3'
     user.settings:
       simpleConfigUpdate:
         register: admin_only
-    views.view.who_s_online.yml:
+    views.view.who_s_online:
       simpleConfigUpdate:
-        display_options:
-          access:
-            type: role
-            options:
-              role:
-                administrator: administrator
-
+        access:
+          type: role
+          options:
+            role:
+              administrator: administrator
