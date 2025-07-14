@@ -1,0 +1,22 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 546721b0-3e63-4fa3-aa56-4c2842189375
+  bundle: image_category
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: Other
+  weight:
+    -
+      value: 99
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
