@@ -44,7 +44,21 @@ config:
     dashboard: '*'
     gin: '*'
     navigation: '*'
-    olivero: '*'
+    # Exclude Search forms.
+    olivero: 
+      - block.block.olivero_account_menu
+      - block.block.olivero_breadcrumbs
+      - block.block.olivero_content
+      - block.block.olivero_help
+      - block.block.olivero_main_menu
+      - block.block.olivero_messages
+      - block.block.olivero_page_title
+      - block.block.olivero_powered
+      - block.block.olivero_primary_admin_actions
+      - block.block.olivero_primary_local_tasks
+      - block.block.olivero_secondary_local_tasks
+      - block.block.olivero_site_branding
+      - block.block.olivero_syndicate
     redirect:
       - system.action.redirect_delete_action
       - views.view.redirect
