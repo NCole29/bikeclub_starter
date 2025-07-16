@@ -10,6 +10,7 @@ recipes:
   # Important to include this here so page_access taxonomy terms are imported with TIDs = 1,2,3 (specified in tac_lite settings).
   - bikeclub_content_type_base
 install:
+  - admin_toolbar
   - config
   - contextual
   - field_ui
@@ -19,7 +20,6 @@ install:
   - layout_discovery
   - menu_ui
   - menu_link_content
-  - navigation
   - olivero
   - user
   - views_ui
@@ -30,7 +30,6 @@ install:
   - config_ignore
   - dashboard
   - gin
-  - gin_toolbar
   - login_emailusername
   - menu_admin_per_menu
   - menu_block
@@ -40,10 +39,8 @@ install:
 config:
   strict: false
   import:
-    claro: '*'
     dashboard: '*'
     gin: '*'
-    navigation: '*'
     # Exclude Search forms.
     olivero: 
       - block.block.olivero_account_menu
@@ -90,7 +87,8 @@ config:
         max_selections: 1
     system.site:
       simpleConfigUpdate:
-        front: '/node'
+        page:
+          front: '/node'
     system.theme:
       simpleConfigUpdate:
         admin: gin
