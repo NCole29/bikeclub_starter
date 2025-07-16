@@ -11,6 +11,7 @@ recipes:
   - bikeclub_content_type_base
 install:
   - admin_toolbar
+  - admin_toolbar_tools
   - config
   - contextual
   - field_ui
@@ -65,6 +66,9 @@ config:
     automatic_updates.settings:
       simpleConfigUpdate:
         allow_core_minor_updates: true
+    gin.settings:
+      simpleConfigUpdate:
+        classic_toolbar: horizontal
     project_browser.admin_settings:
       simpleConfigUpdate:
         allowed_projects:
@@ -96,10 +100,3 @@ config:
     user.settings:
       simpleConfigUpdate:
         register: admin_only
-    views.view.who_s_online:
-      simpleConfigUpdate:
-        access:
-          type: role
-          options:
-            role:
-              administrator: administrator
