@@ -17,8 +17,6 @@ install:
   - field_ui
   - help
   - history
-  - layout_builder
-  - layout_discovery
   - menu_ui
   - menu_link_content
   - olivero
@@ -29,7 +27,6 @@ install:
   - automatic_updates_extensions
   - coffee
   - config_ignore
-  - dashboard
   - gin
   - login_emailusername
   - menu_admin_per_menu
@@ -40,7 +37,6 @@ install:
 config:
   strict: false
   import:
-    dashboard: '*'
     gin: '*'
     # Exclude Search forms.
     olivero: 
