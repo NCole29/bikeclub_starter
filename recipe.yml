@@ -7,7 +7,7 @@ recipes:
   - core/recipes/core_recommended_performance
   - core/recipes/basic_block_type
   - core/recipes/user_picture
-  # Important to include this here so page_access taxonomy terms are imported with TIDs = 1,2,3 (specified in tac_lite settings).
+  # Include content_type_base here so page_access taxonomy terms are imported with TIDs = 1,2,3 (specified in tac_lite settings).
   - bikeclub_content_type_base
 install:
   - admin_toolbar
