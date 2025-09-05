@@ -26,7 +26,6 @@ install:
   - automatic_updates
   - automatic_updates_extensions
   - coffee
-  - config_ignore
   - gin
   - login_emailusername
   - menu_admin_per_menu
