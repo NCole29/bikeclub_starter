@@ -12,6 +12,7 @@ recipes:
 install:
   - admin_toolbar
   - admin_toolbar_tools
+  - admin_toolbar_search
   - config
   - contextual
   - field_ui
@@ -25,7 +26,6 @@ install:
   # Contrib - add 'admin_toolbar_tools' when compatible with project_browser
   - automatic_updates
   - automatic_updates_extensions
-  - coffee
   - gin
   - login_emailusername
   - menu_admin_per_menu
