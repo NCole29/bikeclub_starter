@@ -20,7 +20,9 @@
     "drupal/menu_admin_per_menu": "^1.6",
     "drupal/menu_block": "^1.14",
     "drupal/redirect": "^1.11",
-    "drupal/token": "^1.15"
+    "drupal/token": "^1.15",
+    "drupal/views_local_tasks": "^1.0",
+    "drupal/views_bulk_operations": "^4.0"
   },
   "suggest": {
     "bikeclub/bikeclub_announcements": "Adds an Announcement content type. Announcements are published for a scheduled period of time and displayed on the home page",

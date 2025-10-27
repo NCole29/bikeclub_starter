@@ -33,6 +33,8 @@ install:
   - project_browser
   - redirect
   - token  
+  - views_local_tasks
+  - views_bulk_operations
 config:
   strict: false
   import:
@@ -66,24 +68,7 @@ config:
         classic_toolbar: horizontal
     project_browser.admin_settings:
       simpleConfigUpdate:
-        allowed_projects:
-          recipes:
-            - bikeclub_announcements
-            - bikeclub_civicrm
-            - bikeclub_default_content
-            - bikeclub_dev
-            - bikeclub_editorial_workflow
-            - bikeclub_events
-            - bikeclub_faqs
-            - bikeclub_member_directory
-            - bikeclub_page
-            - bikeclub_paragraph_types
-            - bikeclub_webform_nodes
-        enabled_sources:
-          - drupalorg_jsonapi
-          - recipes
         allow_ui_install: true
-        max_selections: 1
     system.site:
       simpleConfigUpdate:
         page:
