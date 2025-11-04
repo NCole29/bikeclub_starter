@@ -10,9 +10,6 @@ recipes:
   # Include content_type_base here so page_access taxonomy terms are imported with TIDs = 1,2,3 (specified in tac_lite settings).
   - bikeclub_content_type_base
 install:
-  - admin_toolbar
-  - admin_toolbar_tools
-  - admin_toolbar_search
   - config
   - contextual
   - field_ui
@@ -20,12 +17,16 @@ install:
   - history
   - menu_ui
   - menu_link_content
+  - navigation
   - olivero
   - user
   - views_ui
   # Contrib - add 'admin_toolbar_tools' when compatible with project_browser
+  - admin_toolbar
+  - admin_toolbar_search
   - automatic_updates
   - automatic_updates_extensions
+  - coffee
   - gin
   - login_emailusername
   - menu_admin_per_menu

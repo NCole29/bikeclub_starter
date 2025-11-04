@@ -4,3 +4,8 @@ id: ride_leader
 label: 'Ride leader'
 weight: 3
 is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access toolbar'
+  - 'view the administration theme'
