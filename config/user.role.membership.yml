@@ -10,5 +10,6 @@ permissions:
   - 'access toolbar'
   - 'access user profiles'
   - 'administer users'
+  - 'create media'
   - 'view the administration theme'
   - 'view user email addresses'
