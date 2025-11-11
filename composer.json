@@ -21,6 +21,7 @@
     "drupal/menu_admin_per_menu": "^1.6",
     "drupal/menu_block": "^1.14",
     "drupal/redirect": "^1.11",
+	"drupal/role_delegation": "^1.4",
     "drupal/token": "^1.15",
     "drupal/views_local_tasks": "^1.0",
     "drupal/views_bulk_operations": "^4.0"

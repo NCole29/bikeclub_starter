@@ -33,6 +33,7 @@ install:
   - menu_block
   - project_browser
   - redirect
+  - role_delegation
   - token  
   - views_local_tasks
   - views_bulk_operations

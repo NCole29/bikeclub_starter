@@ -1,13 +1,27 @@
 langcode: en
 status: true
+dependencies:
+  config:
+    - filter.format.ride_page
+    - node.type.recurring_ride
+    - node.type.ride
+  module:
+    - bikeclub_ride_tools
+    - filter
+    - media
+    - node
+    - quick_node_clone
+    - role_delegation
+    - system
+    - toolbar
 id: rides_coordinator
 label: 'Rides coordinator'
 weight: 5
 is_admin: false
 permissions:
   - 'access administration pages'
-  - 'access content overview'
   - 'access toolbar'
-  - 'create media'
+  - 'assign ride_leader role'
   - 'view the administration theme'
   - 'view user email addresses'
+
